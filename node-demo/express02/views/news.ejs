@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>我是ejs模板引擎--新闻页面</h2>
+    <p><%=userinfo.username%>--<%=userinfo.age%></p>
+    <p><%-ariticle%></p>
+    <h2>条件判断</h2>
+    <%if(flag==true){%>
+      <strong>flag=true</strong>
+    <%}%>
+    <%if(score>=60){%>
+     <p>及格</p>
+    <%}else{%>
+      <p>不及格</p>
+    <%}%>
+
+    <h2>循环遍历</h2>
+    <ul>
+      <%for(var i=0;i<list.length;i++){%>
+        <li><%=list[i]%></li>
+      <%}%>
+    </ul>
+
+    <%- include('footer.ejs')%>
+  </body>
+</html>
