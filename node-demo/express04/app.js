@@ -13,7 +13,7 @@ app.use((req,res,next)=>{
 app.engine("html",ejs.__express)
 app.set("view engine","html")
 
-//配置静态目录
+//内置中间件
 app.use(express.static("static"))
 
 app.get("/",(req,res)=>{
